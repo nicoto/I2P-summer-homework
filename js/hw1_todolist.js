@@ -1,12 +1,9 @@
-var tasks = ["Mow the lawn", "Take time for prayers", "Get a haircut", "Conceive final project", "Ask that girl out, finally", "Visit museum", "Buy materials for class"];
+var toDoList = ["task1", "task2", "task3", "task4", "task5", "task6", "task7", "task8", "task9", "task10"];
 
-document.write('<ul class="list-group">');
+document.write("<ul class='toDoTaskList'>");
 
-for(var j=0; j < tasks.length; j++) {
-
-console.log(tasks[j]);
-document.write('<li class="list-group-item">' + tasks[i] + '</li>');
-
+for(i=0; i<toDoList.length; i++) {
+document.writeln("<li class='taskItem'>" + toDoList[i] + "</li>");  
 }
 
-document.write('</ul');
+document.write("</ul>");
