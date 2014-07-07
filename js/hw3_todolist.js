@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     var toDoList = [{
-        /*'name': 'Clean room',*/
+        'name': 'Clean room',
         'complete': true
     }, {
         'name': 'Grocery shop',
@@ -35,8 +35,12 @@ $(document).ready(function () {
         }
 
         if (taskObj.complete === true) { // or you can write taskObj['complete']
-            $('.taskListGroup').append("<li class='taskCompleted' style='color:green;' id='litem-" + counter + "'>" + taskObj.name + "&nbsp;&nbsp;<i class='glyphicon glyphicon-ok'></i>" + "</li>");
-            //$('#litem' + counter).css("color", "green");
+            $('.taskListGroup').append("<li class='taskCompleted' id='litem-" + counter + "'></li>");
+            
+            var strTempID = 'li#litem-' + counter;
+            $(strTempID).text(taskObj.name).append("&nbsp;&nbsp;<i class='glyphicon glyphicon-ok'></i>");
+            $(strTempID).css("color", "green");
+            
         }
     }
 
